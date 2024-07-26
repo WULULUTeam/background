@@ -1,7 +1,7 @@
 package com.wululu.wululu.controller;
 import com.wululu.wululu.entity.Admin;
 import com.wululu.wululu.service.adminService;
-import com.wululu.wululu.common.Result
+import com.wululu.wululu.common.Result;
 import jakarta.annotation.Resource;
 import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 import org.springframework.web.bind.annotation.PostMapping;
