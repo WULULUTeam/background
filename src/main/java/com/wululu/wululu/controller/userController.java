@@ -19,6 +19,7 @@ public class userController {
 
     @PostMapping("/insert")
     public Result add(@RequestBody User user) {
+        /*添加用户*/
         userService.insert(user);
         return Result.success("插入成功！");
     }
