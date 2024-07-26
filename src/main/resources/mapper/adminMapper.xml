@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wululu.wululu.mapper.adminMapper">
+
+    <insert id="insert">
+        insert into user
+        <trim prefix="(" suffix=")" suffix0verrides=",">
+            <if test="ID != null">id </if>
+            <if test="ACCOUNT_ID != nul">username,</if>
+            <if test="PASSWORD != null">password,</if>
+            <if test="NAME != null">name,</if>
+            <if test="TOKEN != null">phone,</if>
+            <if test="ROLE != null">email,</if>
+            <if test="AVATAR != null">avatar,</if>
+            <if test="INFO != null">role,</if>
+        </trim>
+        <trim prefix="values(" suffix=")" suffix0verrides=",">
+            <if test="ID != null">#{id},</if>
+            <if test="ACCOUNT_ID != null">#{username},</if>
+            <if test="PASSWORD != null">#{password},</if>
+            <if test="NAME != null">#{name},</if>
+            <if test="TOKEN != null">#{phone},</if>
+            <if test="ROLE != null">#{email},</if>
+            <if test="AVATAR != null">#{avatar},</if>
+            <if test="INFO != null">#{role},</if>
+        </trim>
+    </insert>
+</mapper>
