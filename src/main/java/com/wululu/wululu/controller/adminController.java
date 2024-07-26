@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/admin")
 public class adminController {
+    @Resource
+    private adminService adminService;
     @PostMapping("/add")
     public Result add(@RequestBody Admin admin){
         adminService.insert(admin);

@@ -11,6 +11,7 @@ public class userService {
     private userMapper userMapper;
 
     public void insert(User user){
+
         userMapper.insert(user);
     }
 }
